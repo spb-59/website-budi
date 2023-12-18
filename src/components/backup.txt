@@ -1,0 +1,103 @@
+  <!-- return (
+        <div className="pt-2 grid grid-rows-2 max-h-max max-w-max">
+            <div ref={ref} className="flex max-w-fit max-h-fit">
+                <motion.button
+                    className="pr-10 row-start-1 row-span-1"
+                    whileHover={{ scale: 1.1 }}
+                    whileTap={{ scale: 0.9 }}
+                    onClick={open}
+                >
+                    <img src={graph} alt="A London skyscraper" />
+                </motion.button>
+
+            </div>
+            <motion.div style={{ y }} className="row-start-2 row-span-1 text-xl max-h-20 pt-96">
+                {text[id]}
+            </motion.div>
+            {modalOpen && <Modal modalOpen={modalOpen} handleClose={close} />}
+        </div>
+    );
+} -->
+
+import AnimatedImage from "./ImageAn";
+import { budi, graph } from "../assests";
+import TextBox from "./TextAn";
+
+
+export default function Solution() {
+    return (
+        <section id="Solution" className=" bg-white ">
+
+
+            <div className="grid grid-rows-3 grid-cols-12 relative bg-inherit pb-40 ">
+                <div className="row-start-1 col-start-1 pt-10 pl-10">Our solution</div>
+
+
+                <div className="row-start-2 head-text col-start-3 col-span-3">
+                    How we help you
+
+
+                </div>
+                <div className="flex flex-shrink row-start-3 col-start-3 col-span-3 bg-black bg-opacity-5 row-span-1 pt-10">
+                    Excepteur in magna officia cupidatat mollit excepteur nostrud. Ea qui occaecat culpa fugiat ipsum pariatur enim deserunt. Ea adipisicing eiusmod eiusmod voluptate aliqua reprehenderit reprehenderit culpa adipisicing excepteur qui.Officia minim adipisicing dolore aliqua dolore. Ullamco ut eu Lorem velit ad et ullamco do. Eu tempor incididunt ex officia sint.
+
+
+                </div>
+            </div>
+
+            
+            <div className="grid grid-rows-6 relative  grid-cols-12">
+                <div className="col-start-3 row-start-2 col-span-3 ">
+                    <TextBox 
+                    text={'Cupidatat do magna pariatur magna deserunt esse cillum dolore esse ea minim esse eiusmod. Officia et adipisicing Lorem eiusmod et duis veniam. Nisi ad minim officia eiusmod reprehenderit aute sunt.'}
+                     />
+                </div>
+
+                <div className="col-start-7 row-start-1 col-span-3 row-span-1 ">
+
+                    <AnimatedImage src={graph} alt={'budi'} />
+
+
+                </div>
+                  <div className="col-start-3 row-start-4 col-span-3 ">
+                    <TextBox 
+                    text={'Cupidatat do magna pariatur magna deserunt esse cillum dolore esse ea minim esse eiusmod. Officia et adipisicing Lorem eiusmod et duis veniam. Nisi ad minim officia eiusmod reprehenderit aute sunt.'}
+                     />
+                </div>
+
+                <div className="col-start-7 row-start-3 col-span-3 row-span-1 ">
+
+                    <AnimatedImage src={graph} alt={'budi'} />
+
+
+                </div>
+                  <div className="col-start-3 row-start-6 col-span-3 ">
+                    <TextBox 
+                    text={'Cupidatat do magna pariatur magna deserunt esse cillum dolore esse ea minim esse eiusmod. Officia et adipisicing Lorem eiusmod et duis veniam. Nisi ad minim officia eiusmod reprehenderit aute sunt.'}
+                     />
+                </div>
+
+                <div className="col-start-7 row-start-5 col-span-3 row-span-1 ">
+
+                    <AnimatedImage src={graph} alt={'budi'} />
+
+
+                </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            </div>
+        </section>
+    )
+}
