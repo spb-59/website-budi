@@ -3,6 +3,7 @@ import { motion, useScroll, useTransform } from "framer-motion";
 import { graph, image1, image2, image3 } from "../assests"; // Fix typo in "assets"
 import Modal from "./Modal";
 import useModal from "./hooks/modalHook";
+import HorizontalScrollCarousel from "./HorizontalScroll";
 
 // Custom hook for parallax effect
 function useParallax(value, distance) {
@@ -58,7 +59,7 @@ export default function Services() {
 
 
     return (
-        <section className="relative" id="Services">
+        <section className="relative bg-transparent " id="Services">
 
             <div class="custom-shape-divider-top-1702476858">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
@@ -82,13 +83,14 @@ export default function Services() {
                 </div>
 
             </div>
-            <div className="flex flex-col flex-auto pl-6">
+            {/* <div className="flex flex-col flex-auto pl-6">
                 <div className=" flex flex-auto ">
                     {[0, 1, 2].map((image) => (
                         <Image key={image} id={image} className="flex-auto" />
                     ))}
                 </div>
-            </div>
+            </div> */}
+            <HorizontalScrollCarousel />
 
         </section>
     );
