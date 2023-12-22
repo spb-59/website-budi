@@ -19,6 +19,7 @@
     "react-scripts": "^5.0.1",
     "react-scrollspy": "^3.4.3",
     "react-waypoint": "^10.3.0",
+    "serve": "^14.2.1",
     "tailwindcss": "^3.3.6",
     "web-vitals": "^2.1.4",
     "webpack": "^5.89.0"
