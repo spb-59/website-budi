@@ -1,12 +1,11 @@
 import { web } from "../assests";
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 
 
 
 export default function InrtoEco() {
 
     const introRef = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
 
     function changeBgColorSmoothly() {
         var appElement = document.querySelector('.App');
@@ -20,17 +19,19 @@ export default function InrtoEco() {
 
     useEffect(() => {
         let timeoutId;
+        // const introRefCurrent = introRef.current; // Create a variable to hold the current value of introRef
+
 
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
                     timeoutId = setTimeout(() => {
-                        setIsVisible(true);
+
                         changeBgColorSmoothly(); // Add the class when visible
                     }, 100);
                 } else {
                     clearTimeout(timeoutId);
-                    setIsVisible(false);
+
                     changeBgColorSmoothlyTrans(); // Remove the class when not visible
                 }
             },
@@ -46,9 +47,9 @@ export default function InrtoEco() {
         }
 
         return () => {
-            if (introRef.current) {
-                observer.unobserve(introRef.current);
-            }
+            // if (introRef.current) {
+            //     observer.unobserve(introRef.current);
+            // }
         };
     }, []);
 
@@ -72,7 +73,7 @@ export default function InrtoEco() {
                     <button className="button">Discover</button>
                 </div>
 
-                  <div className="col-start-6 pt-32 row-start-4 pl-28  ">
+                <div className="col-start-6 pt-32 row-start-4 pl-28  ">
                     <button className="button">Discover</button>
                 </div>
 
@@ -82,20 +83,20 @@ export default function InrtoEco() {
                 </div>
 
                 <div className="col-start-2  col-span-2 row-start-5 text-white  flex flex-col ">
-                <span className="text-3xl font-bold trans-text yellow-grad">Customer Pick Up Experience</span>  <span className="text-xs">Pariatur consequat irure id anim reprehenderit et elit magna duis dolor anim. Irure excepteur sit veniam incididunt laboris aliqua non mollit.</span>
+                    <span className="text-3xl font-bold trans-text yellow-grad">Customer Pick Up Experience</span>  <span className="text-xs">Pariatur consequat irure id anim reprehenderit et elit magna duis dolor anim. Irure excepteur sit veniam incididunt laboris aliqua non mollit.</span>
                 </div>
 
 
                 <div className="col-start-10 col-span-2 row-start-3 text-white  flex flex-col ">
-                <span className="text-3xl font-bold trans-text yellow-grad">Powerful Platform
-& Community</span>  <span className="text-xs">Pariatur consequat irure id anim reprehenderit et elit magna duis dolor anim. Irure excepteur sit veniam incididunt laboris aliqua non mollit.</span>
+                    <span className="text-3xl font-bold trans-text yellow-grad">Powerful Platform
+                        & Community</span>  <span className="text-xs">Pariatur consequat irure id anim reprehenderit et elit magna duis dolor anim. Irure excepteur sit veniam incididunt laboris aliqua non mollit.</span>
                 </div>
 
 
                 <div className="col-start-9 col-span-2 row-start-5 text-white  flex flex-col ">
-                <span className="text-3xl trans-text yellow-grad font-bold">Fully integrated
-Custom
-Shopify Plugin</span>  <span className="text-xs ">Pariatur consequat irure id anim reprehenderit et elit magna duis dolor anim. Irure excepteur sit veniam incididunt laboris aliqua non mollit.</span>
+                    <span className="text-3xl trans-text yellow-grad font-bold">Fully integrated
+                        Custom
+                        Shopify Plugin</span>  <span className="text-xs ">Pariatur consequat irure id anim reprehenderit et elit magna duis dolor anim. Irure excepteur sit veniam incididunt laboris aliqua non mollit.</span>
                 </div>
 
 

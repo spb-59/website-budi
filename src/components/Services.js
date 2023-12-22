@@ -1,61 +1,61 @@
-import React, { useRef } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
-import { graph, image1, image2, image3 } from "../assests"; // Fix typo in "assets"
-import Modal from "./Modal";
-import useModal from "./hooks/modalHook";
+// import React, { useRef } from "react";
+// import { motion, useScroll, useTransform } from "framer-motion";
+// import { graph, image1, image2, image3 } from "../assests"; // Fix typo in "assets"
+// import Modal from "./Modal";
+// import useModal from "./hooks/modalHook";
 import HorizontalScrollCarousel from "./HorizontalScroll";
 
-// Custom hook for parallax effect
-function useParallax(value, distance) {
-    return useTransform(value, [0.3, 0.8], [-distance, distance * 50]);
-}
+// // Custom hook for parallax effect
+// function useParallax(value, distance) {
+//     return useTransform(value, [0.3, 0.8], [-distance, distance * 50]);
+// }
 
 
-function Image({ id }) {
-    const { modalOpen, close, open } = useModal();
+// function Image({ id }) {
+//     const { modalOpen, close, open } = useModal();
 
 
 
-    const ref = useRef(null);
-    const { scrollYProgress } = useScroll({ target: ref });
-    const y = useParallax(scrollYProgress, 100);
-    const text = [
-        "Aute excepteur amet ipsum est in pariatur cupidata .",
-        "Aute excepteur amet ipsum est in pariatur cupidata .",
-        "Aute excepteur amet ipsum est in pariatur cupidata ."
-    ];
-    const image=[image1,image2,image3];
+//     const ref = useRef(null);
+//     const { scrollYProgress } = useScroll({ target: ref });
+//     const y = useParallax(scrollYProgress, 100);
+//     const text = [
+//         "Aute excepteur amet ipsum est in pariatur cupidata .",
+//         "Aute excepteur amet ipsum est in pariatur cupidata .",
+//         "Aute excepteur amet ipsum est in pariatur cupidata ."
+//     ];
+//     // const image=[image1,image2,image3];
 
-    return (
-        <>
-            <div className="pt-20 flex flex-col max-h-max max-w-max h-max w-max">
-                <div ref={ref} className=" flex max-w-fit max-h-fit h-full w-full pb-16">
-                    <motion.button
-                        className=" flex-auto h-full w-full"
-                        whileHover={{ scale: 1.1 }}
-                        whileTap={{ scale: 0.9 }}
-                        onClick={() => (modalOpen ? close() : open())}
-                    >
-                        <img src={graph} alt="A London skyscraper" />
-                    </motion.button>
-
-
-                </div>
-                <motion.div style={{ y }} className="flex flex-auto text-4xl pt-20 pb-44 ">
-                    {text[id]}
-                </motion.div>
+//     return (
+//         <>
+//             <div className="pt-20 flex flex-col max-h-max max-w-max h-max w-max">
+//                 <div ref={ref} className=" flex max-w-fit max-h-fit h-full w-full pb-16">
+//                     <motion.button
+//                         className=" flex-auto h-full w-full"
+//                         whileHover={{ scale: 1.1 }}
+//                         whileTap={{ scale: 0.9 }}
+//                         onClick={() => (modalOpen ? close() : open())}
+//                     >
+//                         <img src={graph} alt="A London skyscraper" />
+//                     </motion.button>
 
 
-            </div>
-            <div className="section absolute">   {modalOpen && <Modal className="section bg-black" handleClose={close} text={'Mollit laboris eu ea ipsum nulla magna ut et officia sunt minim sunt do.Ex esse velit ad nulla proident. Laborum esse nostrud dolor laboris sunt do. Reprehenderit dolore consectetur consectetur nostrud aliquip sunt esse cupidatat commodo et aliquip tempor sint pariatur.'} />}</div>
-        </>
+//                 </div>
+//                 <motion.div style={{ y }} className="flex flex-auto text-4xl pt-20 pb-44 ">
+//                     {text[id]}
+//                 </motion.div>
 
-    );
-}
+
+//             </div>
+//             <div className="section absolute">   {modalOpen && <Modal className="section bg-black" handleClose={close} text={'Mollit laboris eu ea ipsum nulla magna ut et officia sunt minim sunt do.Ex esse velit ad nulla proident. Laborum esse nostrud dolor laboris sunt do. Reprehenderit dolore consectetur consectetur nostrud aliquip sunt esse cupidatat commodo et aliquip tempor sint pariatur.'} />}</div>
+//         </>
+
+//     );
+// }
 
 export default function Services() {
 
-    const { scrollYProgress } = useScroll();
+    // const { scrollYProgress } = useScroll();
 
 
     return (

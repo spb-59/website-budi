@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
 import { Outlet } from 'react-router-dom';
 
 import "../App.css"
@@ -6,7 +6,6 @@ import { budi } from '../assests';
 
 export default function Intro() {
     const footerRef = useRef(null);
-    const [isVisible, setIsVisible] = useState(false);
 
     function changeBgColorSmoothly() {
         var appElement = document.querySelector('.App');
@@ -20,17 +19,19 @@ export default function Intro() {
 
     useEffect(() => {
         let timeoutId;
+        // const footerRefCurrent = footerRef.current; // Create a variable to hold the current value of footerRef
+
 
         const observer = new IntersectionObserver(
             ([entry]) => {
                 if (entry.isIntersecting) {
                     timeoutId = setTimeout(() => {
-                        setIsVisible(true);
+
                         changeBgColorSmoothly(); // Add the class when visible
                     }, 100);
                 } else {
                     clearTimeout(timeoutId);
-                    setIsVisible(false);
+
                     changeBgColorSmoothlyTrans(); // Remove the class when not visible
                 }
             },
@@ -46,12 +47,11 @@ export default function Intro() {
         }
 
         return () => {
-            if (footerRef.current) {
-                observer.unobserve(footerRef.current);
-            }
+            // if (footerRef.current) {
+            //     observer.unobserve(footerRef.current);
+            // }
         };
     }, []);
-
     return (
         <>
             <section
@@ -68,7 +68,7 @@ export default function Intro() {
 
                  row-span-full  col-span-full grid grid-cols-12 grid-rows-4 bg-gray-100 bg-opacity-5 '>
 
-                        <img className='row-start-2 col-start-1 row-span-1 col-span-2' src={budi} />
+                        <img className='row-start-2 col-start-1 row-span-1 col-span-2' alt=' ' src={budi} />
                         <span className='row-start-2 col-start-3 col-span-full text-4xl'>
                            Legal
                         </span>

@@ -1,5 +1,5 @@
 import AnimatedImage from "./ImageAn";
-import { budi, graph, image1, image2, image3 } from "../assests";
+import { budi, image1, image2, image3 } from "../assests";
 import TextBox from "./TextAn";
 import React, { useRef, useEffect, useState } from 'react';
 

@@ -1,7 +1,6 @@
 import React from "react";
-import { Route, Routes, BrowserRouter as Router } from "react-router-dom";
 
-import Intro from "../components/Intro";
+// import Intro from "../components/Intro";
 import About from "../components/About";
 import Solution from "../components/Solution";
 import Services from "../components/Services";
