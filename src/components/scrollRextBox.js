@@ -12,4 +12,5 @@ export default function TextBoxScroll({ text, textD }) {
     )
 
 
+
 }

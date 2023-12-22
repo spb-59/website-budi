@@ -8,18 +8,7 @@ import FAQ from "./components/FAQ";
 export default function MyRoutes() {
   return (
     <Routes>
-      <Route path="/" element={<>
-        <Intro />
-        <div className="relative">
-          <Navbar />
-          <About />
-          <Services />
-          <Solution />
-          <Sponsors />
-          
-        </div>
-        <FAQ/>
-      </>} />
+      <Route path="/" element={<Landing />} />
 
 
 

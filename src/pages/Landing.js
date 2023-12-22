@@ -7,34 +7,30 @@ import Solution from "../components/Solution";
 import Services from "../components/Services";
 import Sponsors from "../components/Sponsors";
 import Navbar from "../components/Navbar";
-import { useRef } from "react";
+import FAQ from "../components/FAQ";
+import EcoServ from "../components/EcoServ";
+import InrtoEco from "../components/EcoIntro";
 
 export default function Landing() {
 
     return (
-        <div>
-            <Intro />
-
-            <div>
+        <>
+            {/* <Intro /> */}
+            <InrtoEco />
+            <div className="relative">
                 <Navbar />
-                <Routes>
-                       <Route path="/about" element={<About />} />
 
-                    <Route path="/services" element={<Services />} />
-                    <Route path="/solution" element={<Solution />} />
-                    <Route path="/sponsors" element={<Sponsors />} />
+                <EcoServ />
 
+           
+                <Services />
+                <Solution />
 
-
-                </Routes>
-
-
+                <About />
+                <Sponsors />
 
             </div>
-
-
-
-
-        </div >
+            <FAQ />
+        </>
     );
 }

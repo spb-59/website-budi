@@ -26,7 +26,7 @@ export default function About() {
         >
 
 
-            <div className="grid grid-rows-6 grid-cols-12 relative ">
+            <div className="grid grid-rows-6 grid-cols-12 relative w-full h-full">
 
          
                 <motion.div

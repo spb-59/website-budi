@@ -10,11 +10,11 @@ export default function HorizontalScroll() {
         target: targetRef,
     });
 
-    const x = useTransform(scrollYProgress, [0, 1], ["10%", "-150%"]);
+    const x = useTransform(scrollYProgress, [0, 1], ["10%", "-550%"]);
 
     return (
         <div ref={targetRef} className="relative h-[300vh]">
-            <div className="sticky top-32 left-20 h-screen overflow-hidden">
+            <div className="sticky top-32 left-20 h-[120vh] overflow-hidden">
                 <motion.div style={{ x }} className="flex gap-20 h-[50vh] min-w-[150vh]">
                     <AnimatedImage src={image3} />
                     <TextBoxScroll text={'Excepteur ad amet ad consequat excepteur labore labore ad est.'} textD={'Magna magna quis ullamco ex veniam elit eu aliqua. Ut aliquip ullamco anim non. Laboris ut eiusmod cillum excepteur irure. Enim ea cillum ex consectetur minim commodo proident aliquip nostrud est occaecat. Nulla anim exercitation dolor dolore. Esse tempor ut incididunt laborum reprehenderit consequat dolor culpa officia ipsum.'} />

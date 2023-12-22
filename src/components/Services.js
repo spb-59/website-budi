@@ -61,7 +61,7 @@ export default function Services() {
     return (
         <section className="relative bg-transparent " id="Services">
 
-            <div class="custom-shape-divider-top-1702476858">
+            {/* <div class="custom-shape-divider-top-1702476858">
                 <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
                     <path d="M1200 120L0 16.48 0 0 1200 0 1200 120z" class="shape-fill"></path>
                 </svg>
@@ -71,16 +71,16 @@ export default function Services() {
                     <path d="M598.97 114.72L0 0 0 120 1200 120 1200 0 598.97 114.72z" class="shape-fill"></path>
                 </svg>
             </div>
+ */}
 
-
-            <div className="grid grid-cols-12 grid-rows-3">
-                <div className="row-start-1 col-start-1 pt-10 pl-10">Our solution</div>
-                <div className="row-start-2 head-text col-start-3 col-span-6">
+            <div className="grid grid-cols-12 grid-rows-3 pb-20">
+                {/* <div className="row-start-1 col-start-1 pt-10 pl-10">Our solution</div> */}
+                <div className="row-start-2 col-start-4 text-[38px] col-span-5 row-span-2 flex flex-col items-center gap-0 pt-20 pl-28">
                     What we offer you
                 </div>
-                <div className="row-start-3 col-start-3 col-span-3 bg-black bg-opacity-5 row-span-1">
+                {/* <div className="row-start-3 col-start-4 col-span-5 bg-black bg-opacity-5 row-span-2 pl-14 flex flex-col items-center gap-0 pt-5">
                     Excepteur in magna officia cupidatat mollit excepteur nostrud. Ea qui occaecat culpa fugiat ipsum pariatur enim deserunt. Ea adipisicing eiusmod eiusmod voluptate aliqua reprehenderit reprehenderit culpa adipisicing excepteur qui. Officia minim adipisicing dolore aliqua dolore. Ullamco ut eu Lorem velit ad et ullamco do. Eu tempor incididunt ex officia sint.
-                </div>
+                </div> */}
 
             </div>
             {/* <div className="flex flex-col flex-auto pl-6">
