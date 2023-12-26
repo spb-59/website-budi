@@ -7,11 +7,11 @@ export default function BoxFAQ({ ques, ans }) {
     return (
 
 
-        <div className="flex flex-col ali">
-            <div onClick={() => setShow(!show)} className=" hover:text-[#8d8ecc] cursor-pointer font-black text-5xl">
+        <div className="flex flex-col items-center">
+            <div onClick={() => setShow(!show)} className=" hover:text-[#8d8ecc] cursor-pointer md:font-black md:text-xl text-[10px]">
                 {ques}
             </div>
-            <div className="">
+            <div className="text-[7px] md:text-sm">
                 {show && ans}
 
 

@@ -7,7 +7,7 @@ import Footer from './pages/Footer';
 
 function App() {
   return (
-    <div className= 'App ' >
+    <div className= 'App md:overflow-visible overflow-hidden ' >
       <Header />
     
       <MyRoutes />

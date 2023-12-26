@@ -30,7 +30,7 @@ export default function TextBox({ text }) {
       animate={controls}
       variants={textBoxVariants}
       transition={{ duration: 1 }}
-      className="text-center flex p-4 m-4 border border-gray-300"
+      className="text-center flex p-4 m-4 border bg-white bg-opacity-70 border-gray-300 items-center md:w-3/5 flex-auto text-xs"
     >
       {text}
     </motion.div>

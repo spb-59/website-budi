@@ -2,7 +2,7 @@ import React from "react";
 
 // import Intro from "../components/Intro";
 import About from "../components/About";
-import Solution from "../components/Solution";
+import EcoSolution from "../components/ecoSolution";
 import Services from "../components/Services";
 import Sponsors from "../components/Sponsors";
 import Navbar from "../components/Navbar";
@@ -16,17 +16,21 @@ export default function Landing() {
         <>
             {/* <Intro /> */}
             <InrtoEco />
-            <div className="relative">
+            <div className="relative ">
                 <Navbar />
 
                 <EcoServ />
 
-           
-                <Services />
-                <Solution />
+                <EcoSolution />
 
-                <About />
-                <Sponsors />
+
+             
+
+{/*                 
+                <Services /> */}
+
+                {/* <About /> */}
+                {/* <Sponsors /> */}
 
             </div>
             <FAQ />

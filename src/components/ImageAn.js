@@ -22,7 +22,7 @@ export default function AnimatedImage({ src, alt }) {
   }, [controls, inView]);
 
   return (
-  <div className="flex min-w-full  ">
+  <div className="flex items-center  w-full flex-auto">
     <motion.img
       ref={ref}
       src={src}
@@ -31,7 +31,8 @@ export default function AnimatedImage({ src, alt }) {
       animate={controls}
       variants={imageVariants}
       transition={{ duration: 0.5 }}
-      className="w-3/4"
+      className="w-full"
+      
     />
     </div>
   );

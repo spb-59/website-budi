@@ -9,6 +9,7 @@ export default function InrtoEco() {
 
     function changeBgColorSmoothly() {
         var appElement = document.querySelector('.App');
+        // appElement.classList.add('transparent-bg');
         appElement.classList.add('transparent-bg');
     }
 
@@ -28,7 +29,7 @@ export default function InrtoEco() {
                     timeoutId = setTimeout(() => {
 
                         changeBgColorSmoothly(); // Add the class when visible
-                    }, 100);
+                    }, 300);
                 } else {
                     clearTimeout(timeoutId);
 
@@ -54,18 +55,18 @@ export default function InrtoEco() {
     }, []);
 
     return (
-        <section className="relative pb-20 section  bg-transparent" ref={introRef} >
-            <div className="flex absolute top-10  flex-auto justify-center items-center h-3/4 z-0">
-                <img src={web} alt="web" className="w-3/4" />
-            </div>
+        <section className="relative pb-20 md:h-[100vh] " ref={introRef} >
 
 
+                <div className="md:flex lg:flex hidden absolute top-10 z-0 flex-auto justify-center items-center h-3/4  ">
+                    <img src={web} alt="web" className="w-3/4" />
+                </div>
 
-            <div className="grid grid-cols-12 grid-rows-6 z-10 w-full h-full">
+            <div className="grid md:grid-cols-12 grid-cols-12 md:grid-rows-6 grid-rows-4  w-full h-full  relative">
 
-                <div className="col-start-4 col-span-7 text-[64px] row-start-3 row-span-2 gradient-background trans-text flex font-black ">
+                <div className="md:col-start-4 col-start-12 col-span-7 text-head row-start-3 row-span-2 gradient-background trans-text flex font-black z-10 ">
                     <div className="pl-24">
-                        <span className="pl-2">Creating a ecosystem for</span> <br /><span className="pl-10">  your retail experience.</span>
+                        <span className="">Creating a ecosystem for</span> <br /><span className="pl-10">  your retail experience.</span>
                     </div>
                 </div>
 
@@ -83,20 +84,20 @@ export default function InrtoEco() {
                 </div>
 
                 <div className="col-start-2  col-span-2 row-start-5 text-white  flex flex-col ">
-                    <span className="text-3xl font-bold trans-text yellow-grad">Customer Pick Up Experience</span>  <span className="text-xs">Pariatur consequat irure id anim reprehenderit et elit magna duis dolor anim. Irure excepteur sit veniam incididunt laboris aliqua non mollit.</span>
+                    <span className="text-title font-bold trans-text yellow-grad">Customer Pick Up Experience</span>  <span className="text-content">Pariatur consequat irure id anim reprehenderit et elit magna duis dolor anim. Irure excepteur sit veniam incididunt laboris aliqua non mollit.</span>
                 </div>
 
 
                 <div className="col-start-10 col-span-2 row-start-3 text-white  flex flex-col ">
-                    <span className="text-3xl font-bold trans-text yellow-grad">Powerful Platform
-                        & Community</span>  <span className="text-xs">Pariatur consequat irure id anim reprehenderit et elit magna duis dolor anim. Irure excepteur sit veniam incididunt laboris aliqua non mollit.</span>
+                    <span className="text-title font-bold trans-text yellow-grad">Powerful Platform
+                        & Community</span>  <span className="text-content">Pariatur consequat irure id anim reprehenderit et elit magna duis dolor anim. Irure excepteur sit veniam incididunt laboris aliqua non mollit.</span>
                 </div>
 
 
                 <div className="col-start-9 col-span-2 row-start-5 text-white  flex flex-col ">
-                    <span className="text-3xl trans-text yellow-grad font-bold">Fully integrated
+                    <span className="text-title trans-text yellow-grad font-bold">Fully integrated
                         Custom
-                        Shopify Plugin</span>  <span className="text-xs ">Pariatur consequat irure id anim reprehenderit et elit magna duis dolor anim. Irure excepteur sit veniam incididunt laboris aliqua non mollit.</span>
+                        Shopify Plugin</span>  <span className="text-content ">Pariatur consequat irure id anim reprehenderit et elit magna duis dolor anim. Irure excepteur sit veniam incididunt laboris aliqua non mollit.</span>
                 </div>
 
 
