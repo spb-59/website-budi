@@ -1,0 +1,44 @@
+
+.progress {
+  position: sticky;
+  top: 0;
+
+  margin: 0;
+  padding: 0;
+}
+
+
+.progress svg {
+  transform: translateX(-100px) rotate(-90deg);
+}
+
+circle {
+  stroke-dashoffset: 0;
+  stroke-width: 5%;
+  fill: none;
+}
+
+.bg {
+  stroke: red;
+  opacity: 0.2;
+}
+
+.progress .indicator {
+  stroke: red;
+}
+
+
+.sectionF {
+  display: flex;
+  padding-left: 100px;
+  place-items: center;
+
+}
+
+.divF {
+    width: 100vw;
+    height: 25vh;
+  border: 2px dotted var(--accent);
+  position: relative;
+}
+

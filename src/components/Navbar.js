@@ -9,19 +9,20 @@ export default function Navbar() {
   return (
 
     <Scrollspy
-      className="scrollspy"
+      className="hidden md:flex scrollspy"
       items={[
-        "About",
+        
         "Services",
+   
         "Solution",
-        "Sponsors"
+        "FAQ"
       ]}
       currentClassName="isCurrent"
     >
-      <Link className="link" smooth to="#About">About</Link>
+      
       <Link className="link" smooth to="#Services">Services</Link>
       <Link className="link" smooth to="#Solution">Solution</Link>
-      <Link className="link" smooth to="#Sponsors">Sponsors</Link>
+      <Link className="link" smooth to="#FAQ's">FAQ's</Link>
 
     </Scrollspy>
 

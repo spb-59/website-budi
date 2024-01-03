@@ -3,100 +3,100 @@ import { Outlet } from 'react-router-dom';
 
 import "../App.css"
 import { budi } from '../assests';
+import { FormInput } from '../components/FormInput';
 
 export default function Intro() {
     const footerRef = useRef(null);
 
-    function changeBgColorSmoothly() {
-        var appElement = document.querySelector('.App');
-        appElement.classList.add('purple-bg');
-    }
+    // function changeBgColorSmoothly() {
+    //     var appElement = document.querySelector('.App');
+    //     appElement.classList.add('purple-bg');
+    // }
 
-    function changeBgColorSmoothlyTrans() {
-        var appElement = document.querySelector('.App');
-        appElement.classList.remove('purple-bg');
-    }
+    // function changeBgColorSmoothlyTrans() {
+    //     var appElement = document.querySelector('.App');
+    //     appElement.classList.remove('purple-bg');
+    // }
 
-    useEffect(() => {
-        let timeoutId;
-        // const footerRefCurrent = footerRef.current; // Create a variable to hold the current value of footerRef
+    // useEffect(() => {
+    //     let timeoutId;
+    //     // const footerRefCurrent = footerRef.current; // Create a variable to hold the current value of footerRef
 
 
-        const observer = new IntersectionObserver(
-            ([entry]) => {
-                if (entry.isIntersecting) {
-                    timeoutId = setTimeout(() => {
+    //     const observer = new IntersectionObserver(
+    //         ([entry]) => {
+    //             if (entry.isIntersecting) {
+    //                 timeoutId = setTimeout(() => {
 
-                        changeBgColorSmoothly(); // Add the class when visible
-                    }, 300);
-                } else {
-                    clearTimeout(timeoutId);
+    //                     changeBgColorSmoothly(); // Add the class when visible
+    //                 }, 300);
+    //             } else {
+    //                 clearTimeout(timeoutId);
 
-                    changeBgColorSmoothlyTrans(); // Remove the class when not visible
-                }
-            },
-            {
-                root: null,
-                rootMargin: '0px',
-                threshold: 0.85,
-            }
-        );
+    //                 changeBgColorSmoothlyTrans(); // Remove the class when not visible
+    //             }
+    //         },
+    //         {
+    //             root: null,
+    //             rootMargin: '0px',
+    //             threshold: 0.50,
+    //         }
+    //     );
 
-        if (footerRef.current) {
-            observer.observe(footerRef.current);
-        }
+    //     if (footerRef.current) {
+    //         observer.observe(footerRef.current);
+    //     }
 
-        return () => {
-            // if (footerRef.current) {
-            //     observer.unobserve(footerRef.current);
-            // }
-        };
-    }, []);
+    //     return () => {
+    //         // if (footerRef.current) {
+    //         //     observer.unobserve(footerRef.current);
+    //         // }
+    //     };
+    // }, []);
     return (
-  <footer class=" pb-4"
-                ref={footerRef}
-            >
+        <footer className="  "
+            ref={footerRef}
+            
+        >
+            <section className='h-[60vh]' >
                 <div className="flex flex-col  relative bg-inherit  pt-20 items-center">
 
-                    <div className="text-head font-black pb-10 trans-text gradient-background">
+                    <div className="text-[10vw] md:text-[8vw] lg:text-[4vw] text-center font-black pb-10 text-[#562BB9]">
                         Join us today and revolusionise your retail experience.
                     </div>
 
-                    <div className="flex flex-col items-center justify-center trans-text yellow-grad">
-                        <div className="text-lg mb-4 pr-5">
-                          Deserunt laboris labore sint consequat.Quis nulla pariatur ullamco ad sunt.
+                    <div className="flex flex-col items-center justify-center  text-center ">
+                        <div className="text-lg mb-4 pr-5 text-center items-center flex">
+                            Deserunt laboris labore sint consequat.Quis nulla pariatur ullamco ad sunt.
                         </div>
-
-
-
-
-                        <form id="form" class=" pl-5 h-max">
-
-                            <input id="name" type="text" placeholder="NAME" />
-                            <input id="email" type="text" placeholder="E-MAIL" />
-                            <textarea id="message" type="text" placeholder="MESSAGE"></textarea>
-                            <input id="submit" type="submit" value="Send" />
-
-                        </form>
 
                     </div>
 
+                    <FormInput text={"Join Now"} />
+
+
+
+
 
                 </div>
+            </section>
 
 
 
 
+            <section className=''>
 
-
-                <div class="mx-auto w-full max-w-screen-xl ">
+                <div class="mx-auto w-full ">
                     <div class="md:flex md:justify-between">
-                        <div class="pt-10">
-                           
-                                <img src={budi} class="h-8 me-3" alt=" Logo" />
-                         
+                        <div class="pt-10 pb-5">
+
+                            <img src={budi} class="h-8 me-3" alt=" Logo" />
+
                         </div>
-                        <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+
+
+
+                        <div class="grid  grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
                             <div>
                                 <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase dark:text-white">Resources</h2>
                                 <ul class="text-gray-500 dark:text-gray-400 font-medium">
@@ -133,7 +133,7 @@ export default function Intro() {
                         </div>
                     </div>
                     <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
-                    <div class="sm:flex sm:items-center sm:justify-between">
+                    <div class="sm:flex sm:items-center sm:justify-center gap-60">
                         <span class="text-sm text-gray-500 sm:text-center dark:text-gray-400">© 2023 <a href="#" class="hover:underline">Budi™</a>. All Rights Reserved.
                         </span>
                         <div class="flex mt-4 sm:justify-center sm:mt-0">
@@ -161,13 +161,16 @@ export default function Intro() {
                                 </svg>
                                 <span class="sr-only">GitHub account</span>
                             </a>
-                     
+
                         </div>
                     </div>
                 </div>
-            </footer>
+            </section>
 
 
-       
+        </footer>
+
+
+
     );
 }

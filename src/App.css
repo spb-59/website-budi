@@ -1,7 +1,7 @@
 @import 'tailwindcss/base';
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
-@import url('https://fonts.googleapis.com/css?family=Manrope');
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 
 .App {
@@ -10,26 +10,39 @@
   min-width: 100%;
   height: max-content;
   width: 100%;
-  font-family: Manrope;
-  background-color: transparent;
+  font-family: Montserrat;
+
   transition: background-color 1.5s ease, opacity 1.2s ease;
-    background-color: rgb(255, 255, 255); /* Close to transparent */
 
 
 
 
 
 
-}
-.body{
-padding: 0%;
-margin: 0%;
 
 }
+
+.body {
+  padding: 0%;
+  margin: 0%;
+
+}
+
+.im-size {
+  width: 110vw;
+  height: 100vh;
+  object-fit: cover;
+}
+
 
 .text-head {
-  font-size: 3.5cqw;
+
+  font-size: 10vw;
+
 }
+
+
+
 
 .text-head-page {
   font-size: 1.7cqw;
@@ -52,6 +65,24 @@ margin: 0%;
   -webkit-text-fill-color: #562BB9;
 
 }
+
+.cls-1{fill:#7323ad;}
+
+.numCircle {
+  background: #562BB9;
+  border-radius: 1em;
+  -moz-border-radius: 1em;
+  -webkit-border-radius: 1em;
+  color: #ffffff;
+  display: inline-block;
+  font-weight: bold;
+  line-height: 1.5em;
+  margin-right: 5px;
+  align-items: center;
+  text-align: center;
+  width: 1.5em;
+}
+
 
 .bubble-2 {
   place-content: center;
@@ -91,12 +122,12 @@ margin: 0%;
   outline: 0;
   border: 0;
   cursor: pointer;
-  color: #fff;
+  color: #F2C843;
   font-weight: 500;
-  border-radius: 20px;
+  border-radius: 10px;
   /* Adjust the value to control the roundness */
-  font-size: 14px;
-  height: 33px;
+  font-size: 0.5rem;
+  height: 3vh;
   padding: 0px 20px;
   text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
   background: linear-gradient(92.88deg, rgb(130, 84, 216) 9.16%, rgb(105, 93, 185) 43.89%, rgb(103, 63, 215) 64.72%);
@@ -152,11 +183,11 @@ button :hover {
 }
 
 .transparent-bg {
-  background: radial-gradient(circle at center, #F2C843, #562BB9);
-  background-color: #552bb96b;
+  /* background: linear-gradient(to bottom, #562BB9, #7323ad); */
+  background-color: #330257;
   background-size: 100% 75%;
-  transition: transform 1s cubic-bezier(0.075, 0.82, 0.165, 1),
-    opacity 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+  /* transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 1.5s cubic-bezier(0.075, 0.82, 0.165, 1); */
 }
 
 .purple-bg {
@@ -181,12 +212,12 @@ button :hover {
 
 
 .animate {
-  background: linear-gradient(45deg, #8d8ecc, #c2c1fc, #915ee4);
-  background-size: 500% 500%;
-  animation: gradient 10s ease infinite;
-  background-color: #8d8eccf1;
+  background: radial-gradient(circle at center, #F2C843, #562BB9);
+  background-size: 150% 250%;
+  animation: gradient 6s ease infinite;
+  /* background-color: #8d8eccf1; */
   /* Set the final background color here */
-  opacity: 1;
+  /* opacity: 1; */
 }
 
 @keyframes gradient {
@@ -334,7 +365,7 @@ h1 {
 .scrollspy {
 
   position: sticky;
-  display: flex;
+
   flex-direction: column;
   background-color: #00000000;
 
@@ -620,4 +651,173 @@ textarea:hover {
 #submit:hover {
   background: #8a5cf644;
 
+}
+
+.btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 13rem;
+  overflow: hidden;
+  height: 3rem;
+  background-size: 300% 300%;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+  transition: 0.5s;
+  animation: gradient_301 5s ease infinite;
+  border: double 4px transparent;
+  background-image: linear-gradient(45deg, #8a5cf644, #562bb9);
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+}
+
+#container-stars {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  transition: 0.5s;
+  backdrop-filter: blur(1rem);
+  border-radius: 5rem;
+}
+
+strong {
+  z-index: 2;
+
+  font-size: 12px;
+  letter-spacing: 5px;
+  color: #F2C843;
+  text-shadow: 0 0 4px white;
+}
+
+#glow {
+  position: absolute;
+  display: flex;
+  width: 12rem;
+}
+
+.circle {
+  width: 100%;
+  height: 30px;
+  filter: blur(2rem);
+  animation: pulse_3011 15s infinite;
+  z-index: -1;
+}
+
+.circle:nth-of-type(1) {
+  background: #4e109e;
+}
+
+.circle:nth-of-type(2) {
+  background: rgba(114, 39, 228, 0.704);
+}
+
+.btn:hover #container-stars {
+  z-index: 1;
+  background-color: #b99bff59;
+}
+
+.btn:hover {
+  transform: scale(1.1)
+}
+
+.btn:active {
+  border: double 4px #ffffff00;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  animation: none;
+}
+
+.btn:active .circle {
+  background: #ffffff00;
+}
+
+#stars {
+  position: relative;
+  background: transparent;
+  width: 200rem;
+  height: 200rem;
+}
+
+#stars::after {
+  content: "";
+  position: absolute;
+  top: -10rem;
+  left: -100rem;
+  width: 100%;
+  height: 100%;
+  animation: animStarRotate 90s linear infinite;
+}
+
+#stars::after {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+}
+
+#stars::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -50%;
+  width: 170%;
+  height: 500%;
+  animation: animStar 60s linear infinite;
+}
+
+#stars::before {
+  background-image: radial-gradient(#ffffff 1px, transparent 1%);
+  background-size: 50px 50px;
+  opacity: 0.5;
+}
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+
+  to {
+    transform: translateY(-135rem);
+  }
+}
+
+@keyframes animStarRotate {
+  from {
+    transform: rotate(360deg);
+  }
+
+  to {
+    transform: rotate(0);
+  }
+}
+
+@keyframes gradient_301 {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+@keyframes pulse_3011 {
+  0% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
+  }
+
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
+  }
+
+  100% {
+    transform: scale(0.75);
+    box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
 }
