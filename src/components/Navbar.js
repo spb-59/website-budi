@@ -9,13 +9,12 @@ export default function Navbar() {
   return (
 
     <Scrollspy
-      className="hidden md:flex scrollspy"
+      className="hidden lg:flex scrollspy z-40"
       items={[
         
         "Services",
+        "Solution","FAQ's"   
    
-        "Solution",
-        "FAQ"
       ]}
       currentClassName="isCurrent"
     >

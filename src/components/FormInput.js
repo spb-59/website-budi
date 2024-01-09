@@ -24,7 +24,7 @@ import {
 import { Input } from "../@/components/ui/input"
 import { Label } from "../@/components/ui/label"
 
-export function FormInput({text}) {
+export function FormInput({text ,Button}) {
     const [open, setOpen] = React.useState(false)
     const isDesktop = useMediaQuery("(min-width: 768px)")
 
@@ -32,7 +32,7 @@ export function FormInput({text}) {
         return (
             <Dialog open={open} onOpenChange={setOpen}>
                 <DialogTrigger asChild>
-                    <Button variant="outline " className="button "><div className="text-xl">{text}</div></Button>
+                    <Button variant="outline "className={` ${Button}`}><div className=" whitespace-pre-line">{text}</div></Button>
                 </DialogTrigger>
                 <DialogContent className="sm:max-w-[425px]">
                     <DialogHeader>
@@ -49,7 +49,7 @@ export function FormInput({text}) {
     return (
         <Drawer open={open} onOpenChange={setOpen} >
             <DrawerTrigger asChild>
-                <Button variant="outline " className="button">{text}</Button>
+                <Button variant="outline " className={` ${Button}`}>{text}</Button>
             </DrawerTrigger>
             <DrawerContent>
                 <DrawerHeader className="text-left">

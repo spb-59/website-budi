@@ -61,7 +61,7 @@ export default function Intro() {
             <section className='h-[60vh]' >
                 <div className="flex flex-col  relative bg-inherit  pt-20 items-center">
 
-                    <div className="text-[10vw] md:text-[8vw] lg:text-[4vw] text-center font-black pb-10 text-[#562BB9]">
+                    <div className="text-[36px] md:text-[48px] lg:text-[52px] font-bold text-center pb-10 max-w-[75%] text-[#562BB9]">
                         Join us today and revolusionise your retail experience.
                     </div>
 
@@ -72,7 +72,7 @@ export default function Intro() {
 
                     </div>
 
-                    <FormInput text={"Join Now"} />
+                    <FormInput text={"Join Now"} Button={"btnlast"} />
 
 
 
@@ -103,8 +103,8 @@ export default function Intro() {
                                     <li class="mb-4">
                                         <a href='#' class="hover:underline">Budi</a>
                                     </li>
-                                    <li>
-                                        <a href='#' class="hover:underline">Contact us</a>
+                                    <li className=' hover:cursor-pointer hover:underline'>
+                                        <FormInput text={'Contact us'} Button={'block'} />
                                     </li>
                                 </ul>
                             </div>

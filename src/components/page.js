@@ -1,8 +1,9 @@
-import "./page.css";
+
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll } from "framer-motion";
 
-import { image1, image2, image3, graph } from "../../assests";
+import { image1, image2, image3, graph, comm } from "../assests";
+import { FormInput } from "./FormInput";
 
 function Item({ onInViewChange, text, index, title }) {
   const ref = useRef(null);
@@ -36,17 +37,18 @@ function Item({ onInViewChange, text, index, title }) {
     <div className="flex items-center">
       <div
         ref={ref}
-        style={{ opacity: inView ? 1 : 0.2 }}
-        className="flex flex-col min-h-[40vh] gap-5 md:w-full pb-10 items-center"
+        style={{ opacity: inView ? 1 : 0.2, transition: "opacity 0.01s" , transform: "perspective(1200px)"} }
+        className="flex flex-col min-h-[40vh] gap-5 md:w-full pb-10 items-start "
+
       >
         <div className="flex flex-col w-full font-bold text-[24px]  items-start" >
-          <div className="w-full h-full  numCircle">{index + 1}</div>
+          <div className="w-full h-full  numCircle"><span className="w-full items-center text-center">{index + 1}</span></div>
           <div className="h-[10px] border-b border-[#1111112f] w-full"></div>
 
         </div>
-        <div className="flex w-full font-bold text-[40px] "> {title}</div>
+        <div className="flex w-full font-bold text-[24px] "> {title}</div>
 
-        <div className="whitespace-pre-line text-balance text-[18px] ">
+        <div className="whitespace-pre-line text-balance text-[14px] w-[90%]">
           {text}
         </div>
 
@@ -58,7 +60,7 @@ function Item({ onInViewChange, text, index, title }) {
 export default function Page() {
   const [itemInViewStates, setItemInViewStates] = useState(Array(4).fill(false));
   const [currImg, setCurrImg] = useState(image1);
-  const images = [image1, image2, image3, graph];
+  const images = [image1, image2, image1, comm];
 
   function handleInViewChange(index, isInView) {
     // Update the state array to reflect the inView state of each Item
@@ -88,11 +90,11 @@ export default function Page() {
 
 
   return (
-    <section className="flex flex-col  items-center justify-center pb-56">
+    <section className="flex flex-col  items-center justify-center pb-56 gap-y-10 xl:gap-y-20" id="Solution">
 
-      <div className="flex flex-col  relative bg-inherit pb-40 pt-20 items-center">
+      <div className="flex flex-col  relative bg-inherit xl:pb-32 pt-20 items-center">
 
-        <div className="text-[22px] md:text-[38px] font-black">
+        <div className=" text-[20px] sm:text-[32px] xl:text-[48px]  font-bold">
           How we help you
         </div>
 
@@ -107,8 +109,8 @@ export default function Page() {
             <img src={images[0]} className="flex object-scale-down w-[80vw] h-[45vh]"></img>
 
           </div>
-          <div className="flex flex-col  font-bold text-[40px]  items-center w-full" >
-            <div className="flex flex-col w-full font-bold text-[24px] md:items-center  items-start" >
+          <div className="flex flex-col  font-bold text-[16px] sm:text-[32px] xl:text-[48px]   items-center w-full" >
+            <div className="flex flex-col w-full font-bold  text-[12px] sm:text-[18px]  xl:text-[24px] md:items-center  items-start" >
               <div className="w-full h-full  numCircle">1</div>
               <div className="h-[10px] border-b border-black w-full"></div>
 
@@ -116,7 +118,7 @@ export default function Page() {
 
             <div className="">{titles[0]} </div>
           </div>
-          <div className="whitespace-pre-line text-balance text-[14px] ">
+          <div className="whitespace-pre-line text-balance text-[10px] xl:text-[14px] sm:text-[12px] md:text-center ">
             {texts[0]}
           </div>
         </div>
@@ -127,8 +129,8 @@ export default function Page() {
             <img src={images[1]} className="flex object-scale-down w-[80vw] h-[45vh] "></img>
 
           </div>
-          <div className="flex flex-col  font-bold text-[40px]  items-center w-full" >
-            <div className="flex flex-col w-full font-bold text-[24px] md:items-center  items-start" >
+          <div className="flex flex-col  font-bold text-[16px] sm:text-[32px] xl:text-[48px]   items-center w-full" >
+            <div className="flex flex-col w-full font-bold  text-[12px] sm:text-[18px]  xl:text-[24px] md:items-center  items-start" >
               <div className="w-full h-full  numCircle">2</div>
               <div className="h-[10px] border-b border-black w-full"></div>
 
@@ -136,7 +138,7 @@ export default function Page() {
             <div className="">{titles[1]} </div>
           </div>
 
-          <div className="whitespace-pre-line text-balance text-[14px] ">
+          <div className="whitespace-pre-line text-balance text-[10px] xl:text-[14px] sm:text-[12px] md:text-center ">
             {texts[1]}
           </div>
         </div>
@@ -148,8 +150,8 @@ export default function Page() {
 
           </div>
 
-          <div className="flex flex-col  font-bold text-[40px]  items-center w-full" >
-            <div className="flex flex-col w-full font-bold text-[24px] md:items-center  items-start" >
+          <div className="flex flex-col  font-bold text-[16px] sm:text-[32px] xl:text-[48px]   items-center w-full" >
+            <div className="flex flex-col w-full font-bold  text-[12px] sm:text-[18px]  xl:text-[24px] md:items-center  items-start" >
               <div className="w-full h-full  numCircle">3</div>
               <div className="h-[10px] border-b border-black w-full"></div>
 
@@ -157,7 +159,7 @@ export default function Page() {
             <div className="">{titles[2]} </div>
           </div>
 
-          <div className="whitespace-pre-line text-balance text-[14px] ">
+          <div className="whitespace-pre-line text-balance text-[10px] xl:text-[14px] sm:text-[12px] md:text-center ">
             {texts[2]}
           </div>
         </div>
@@ -169,8 +171,8 @@ export default function Page() {
 
           </div>
 
-           <div className="flex flex-col  font-bold text-[40px]  items-center w-full" >
-            <div className="flex flex-col w-full font-bold text-[24px] md:items-center  items-start" >
+          <div className="flex flex-col  font-bold text-[16px] sm:text-[32px] xl:text-[48px]   items-center w-full" >
+            <div className="flex flex-col w-full font-bold  text-[12px] sm:text-[18px]  xl:text-[24px] md:items-center  items-start" >
               <div className="w-full h-full  numCircle">4</div>
               <div className="h-[10px] border-b border-black w-full"></div>
 
@@ -179,7 +181,7 @@ export default function Page() {
             <div className="">{titles[3]} </div>
           </div>
 
-          <div className="whitespace-pre-line text-balance text-[14px] ">
+          <div className="whitespace-pre-line text-balance text-[10px] xl:text-[14px] sm:text-[12px] md:text-center ">
             {texts[3]}
           </div>
         </div>
@@ -203,17 +205,36 @@ export default function Page() {
 
 
 
-      <div className="xl:flex hidden   flex-row relative lg:w-3/5 gap-36">
-        <div className="flex flex-col items-center w-1/2">
+      <div className="xl:flex hidden   flex-row relative lg:w-3/5 gap-20">
+        <div className="flex flex-col items-center max-w-1/2 w-1/2">
           {[...Array(4)].map((_, index) => (
             <Item key={index} onInViewChange={(isInView) => handleInViewChange(index, isInView)} text={texts[index]} index={index} title={titles[index]} />
           ))}
         </div>
-        <img src={currImg} className="flex w-1/2 h-max sticky top-56 bottom-56 "></img>
+        <img src={currImg} className="flex min-w-[450px] max-w-[450px] h-max sticky top-56 bottom-56 "></img>
       </div>
-    
 
 
+      <div className="flex md:flex-row bg-gray-50 md:w-4/5 lg:w-3/5 h-[20vh] items-center  shadow-lg">
+
+        <div className="flex items-center justify-center md:text-[20px] text-center w-1/2 lg:pl-10 pl-5 h-full font-[500]"><div className="w-full">Join us today and be  a <br className="hidden xl:block" />  part of our ecosystem</div></div>
+        <div className="w-full flex items-center justify-center  h-1/3">
+
+          <div className="w-1/2 items-center">
+            <FormInput Button="btnCall" text={"Book Now"} />
+
+          </div>
+
+
+
+        </div>
+
+
+
+
+
+
+      </div>
 
 
     </section >

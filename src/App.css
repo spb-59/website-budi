@@ -20,6 +20,28 @@
 
 
 
+
+}
+
+
+.firefox{
+
+overflow: visible;
+overflow-y: visible;
+
+}
+body::-webkit-scrollbar {
+  width: 3px;               /* width of the entire scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+  background: transparent;
+  
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #562BB9;     
+ 
 }
 
 .body {
@@ -66,22 +88,29 @@
 
 }
 
-.cls-1{fill:#7323ad;}
+
 
 .numCircle {
   background: #562BB9;
   border-radius: 1em;
+
   -moz-border-radius: 1em;
   -webkit-border-radius: 1em;
   color: #ffffff;
-  display: inline-block;
+  display: flex;
+  
   font-weight: bold;
   line-height: 1.5em;
   margin-right: 5px;
   align-items: center;
   text-align: center;
+  box-sizing: border-box;
   width: 1.5em;
+    content: "";
+
 }
+
+
 
 
 .bubble-2 {
@@ -117,7 +146,7 @@
   background: linear-gradient(to right, #3b82f6, #8b5cf6);
 }
 
-.button {
+/* .button {
   display: inline-block;
   outline: 0;
   border: 0;
@@ -125,19 +154,82 @@
   color: #F2C843;
   font-weight: 500;
   border-radius: 10px;
-  /* Adjust the value to control the roundness */
+\
   font-size: 0.5rem;
   height: 3vh;
   padding: 0px 20px;
   text-shadow: rgb(0 0 0 / 25%) 0px 3px 8px;
   background: linear-gradient(92.88deg, rgb(130, 84, 216) 9.16%, rgb(105, 93, 185) 43.89%, rgb(103, 63, 215) 64.72%);
   transition: all 0.5s ease 0s;
-}
+} 
 
 button :hover {
   box-shadow: rgb(80 63 205 / 50%) 0px 1px 40px;
   transition: all 0.1s ease 0s;
+}*/
+
+
+/* CSS */
+.button {
+  display: flex;
+
+  transition: background-color 1.5s ease, opacity 1.2s ease;
+
+ 
+  align-items: start;
+  padding: 0%;
+  font-family: -apple-system, BlinkMacSystemFont, 'Roboto', sans-serif;
+  border-radius: 6px;
+  color: #562BB9;
+  background: #ffffff28;
+  border: none;
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1);
+  user-select: none;
+  -webkit-user-select: none;
+  text-align: left;
+  touch-action: manipulation;
 }
+
+.button:hover {
+  background-color: #552bb952;
+}
+
+.button:focus {
+  box-shadow: 0px 0.5px 1px rgba(0, 0, 0, 0.1), 0px 0px 0px 3.5px rgba(58, 108, 217, 0.5);
+  outline: 0;
+}
+
+
+.btnCall {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  outline: 0;
+  cursor: pointer;
+
+  border-radius: 3px;
+  
+  background: #562BB9;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 28px;
+  padding: 12px 20px;
+  text-align: center;
+  transition-duration: .15s;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(.4, 0, .2, 1);
+
+}
+
+.btnCall:hover {
+  background: rgb(138, 125, 255);
+}
+
+
 
 
 .gradient-background {
@@ -183,11 +275,12 @@ button :hover {
 }
 
 .transparent-bg {
-  /* background: linear-gradient(to bottom, #562BB9, #7323ad); */
-  background-color: #330257;
-  background-size: 100% 75%;
-  /* transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1),
-    opacity 1.5s cubic-bezier(0.075, 0.82, 0.165, 1); */
+  background: linear-gradient(to right, #22003a, #340058);
+  background-color: #22003aa8;
+  animation: gradient 4s ease infinite;
+  background-size: 1000% 100%;
+  transition: transform 1.5s cubic-bezier(0.075, 0.82, 0.165, 1),
+    opacity 1.5s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
 
 .purple-bg {
@@ -370,12 +463,13 @@ h1 {
   background-color: #00000000;
 
   top: 40px;
-  left: 40px;
-  padding-left: 20px;
+  left: 0.5rem;
+  padding-left: 10px;
+  width: 50%;
 
 
 
-  z-index: 50;
+  z-index: 40;
 
 
 
@@ -657,7 +751,9 @@ textarea:hover {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 13rem;
+  width: 6rem;
+  
+ 
   overflow: hidden;
   height: 3rem;
   background-size: 300% 300%;
@@ -666,7 +762,8 @@ textarea:hover {
   transition: 0.5s;
   animation: gradient_301 5s ease infinite;
   border: double 4px transparent;
-  background-image: linear-gradient(45deg, #8a5cf644, #562bb9);
+  /* background-image: linear-gradient(45deg, #8a5cf644, #562bb9); */
+  background-color: #5d23bb;
   background-origin: border-box;
   background-clip: content-box, border-box;
 }
@@ -685,10 +782,12 @@ textarea:hover {
 strong {
   z-index: 2;
 
-  font-size: 12px;
-  letter-spacing: 5px;
-  color: #F2C843;
-  text-shadow: 0 0 4px white;
+
+  letter-spacing: 1px;
+  padding: 0.5rem 0.5rem;
+  color: #FFDB1c;
+ 
+  text-shadow: 0 0 1px white;
 }
 
 #glow {
@@ -821,3 +920,103 @@ strong {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
   }
 }
+
+
+
+
+/* CSS */
+.btn2 {
+  appearance: none;
+
+  border-width: 0;
+ background-color: #340257;
+    box-sizing: border-box;
+
+
+  cursor: pointer;
+  display: inline-block;
+
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0;
+  line-height: 1em;
+  margin: 0;
+  opacity: 1;
+  outline: 0;
+
+
+  position: relative;
+  text-align: center;
+
+  
+  transition: opacity 300ms cubic-bezier(.694, 0, 0.335, 1),background-color 100ms cubic-bezier(.694, 0, 0.335, 1),color 100ms cubic-bezier(.694, 0, 0.335, 1);
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  vertical-align: baseline;
+  white-space: wrap;
+}
+
+.btn2:before {
+  animation: opacityFallbackOut .5s step-end forwards;
+  backface-visibility: hidden;
+  background-color: #b963ff8f;
+  clip-path: polygon(-1% 0, 0 0, -25% 100%, -1% 100%);
+  content: "";
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transform: translateZ(0);
+  transition: clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1), -webkit-clip-path .5s cubic-bezier(.165, 0.84, 0.44, 1);
+  width: 100%;
+}
+
+.btn2:hover:before {
+  animation: opacityFallbackIn 0s step-start forwards;
+  clip-path: polygon(0 0, 101% 0, 101% 101%, 0 101%);
+}
+
+.btn2 div{
+color: white;
+padding: 20px 30px;
+white-space:inherit;}
+
+
+
+/* CSS */
+.btnlast {
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 2rem;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.btnlast:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+  .btnlast {
+    padding: 0 2.6rem;
+  }
+}
+
+
