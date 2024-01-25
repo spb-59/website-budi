@@ -1,30 +1,24 @@
 import React from "react";
 
 import { HashLink as Link } from 'react-router-hash-link';
-import Scrollspy from "react-scrollspy";
+import Scrollspy from "react-ui-scrollspy";
 
 export default function Navbar() {
 
 
   return (
 
-    // <Scrollspy
-    //   className="hidden lg:flex scrollspy z-40"
-    //   items={[
-        
-    //     "Services",
-    //     "Solution","FAQ's"   
-   
-    //   ]}
-    //   currentClassName="isCurrent"
-    // >
+    <div
+      className="hidden lg:flex scrollspy z-40 text-gray-100"
+
+    >
+
       
-    //   <Link className="link" smooth to="#Services">Services</Link>
-    //   <Link className="link" smooth to="#Solution">Solution</Link>
-    //   <Link className="link" smooth to="#FAQ's">FAQ's</Link>
+      <a href="#Services" data-to-scrollspy-id="Services">Services</a>
+       <a href="#Services"  data-to-scrollspy-id="Solution">Solution</a>
+      <a href="#Services" data-to-scrollspy-id="FAQ's">FAQ's</a>
 
-    // </Scrollspy>
-    <div></div>
-
+    </div>
+    
   );
 }

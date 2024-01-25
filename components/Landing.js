@@ -7,6 +7,7 @@ import EcoServ from "../../components/EcoServ";
 import InrtoEco from "../../components/EcoIntro";
 import Callbtn from "../../components/Callbtn";
 import Page from "../../components/page";
+import ScrollSpy from "react-ui-scrollspy";
 
 export default function Landing() {
 
@@ -17,11 +18,13 @@ export default function Landing() {
                 <InrtoEco />
 
                 <div className="relative ">
-                    <Navbar />
 
-                    <EcoServ />
-                    <Page />
-                    <FAQ />
+                    <Navbar />
+                    <ScrollSpy>
+                        <EcoServ id="1"/>
+                        <Page id="2" />
+                        <FAQ id="3" />
+                    </ScrollSpy>
                 </div>
             </div>
         </>

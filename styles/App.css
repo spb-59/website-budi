@@ -491,11 +491,9 @@ h1 {
 
 }
 
-.isCurrent {
-  font-weight: 900;
-}
 
-.isCurrent {
+
+.active-scroll-spy {
   color: #8D8ECC;
 }
 

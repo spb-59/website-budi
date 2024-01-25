@@ -1,8 +1,8 @@
 import * as React from "react"
 
-import { cn } from "../@/lib/utils"
+import { cn } from "../lib/utils"
 import useMediaQuery from "./hooks/useMediaQuery"
-import { Button } from "../@/components/ui/button"
+import { Button } from "../components/ui/button"
 import {
     Dialog,
     DialogContent,
@@ -10,7 +10,7 @@ import {
     DialogHeader,
     DialogTitle,
     DialogTrigger,
-} from "../@/components/ui/dialog"
+} from "../components/ui/dialog"
 import {
     Drawer,
     DrawerClose,
@@ -20,9 +20,9 @@ import {
     DrawerHeader,
     DrawerTitle,
     DrawerTrigger,
-} from "../@/components/ui/drawer"
-import { Input } from "../@/components/ui/input"
-import { Label } from "../@/components/ui/label"
+} from "../components/ui/drawer"
+import { Input } from "../components/ui/input"
+import { Label } from "../components/ui/label"
 
 export function FormInput({text ,Button}) {
     const [open, setOpen] = React.useState(false)

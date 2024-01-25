@@ -69,19 +69,20 @@ useEffect(() => {
 let userData=navigator.userAgent;
 
 setCond(userData.includes('Safari'));
-console.log(cond);},[])
+},[])
 
 
     return (
         <section className="relative  justify-center  w-full items-center  grid-rows-6 grid-cols-12 sm:pb-5 h-[100vh] xl:h-[150vh] xl:pb-10 max-w-[100vw] " ref={introRef} >
 
 
-            <div className="absolute md:top-[-15%]  top-[-20%] xl:top-[-25%] z-0 flex-auto  items-center ">
-                <Image src={web} alt="web" className="im-size firefox xl:h-full" priority={true}/>
+            <div className="absolute md:top-[-15%]  top-[-20%] min-[1281px]:top-[7.5%]   z-0 flex-auto  items-center ">
+                <Image src={web} alt="web" className="im-size firefox lg:min-h-full" priority={true}/>
             </div>
 
             <div className="flex w-full items-center flex-col absolute md:top-[25%] xl:top-[25%] top-[15%] md:gap-10 xl:gap-10">
-                <div className=" text-[10vw] md:text-[5.5vw] xl:text-[4vw] min-[450px]:text-[8vw] min-[450px]:left-[10%] min-[450px]:right-[10%] 
+                
+                <div className=" text-[10vw] md:text-[5vw] xl:text-[4vw] min-[450px]:text-[8vw] min-[450px]:left-[10%] min-[450px]:right-[10%] 
             gradient-background trans-text flex font-black z-10 
             md:top-[20%] xl:top-[25%] top-[15%] left-10% md:left-[10%] xl:left-[15%] xl:right-[15%]  md:bottom-[25%] right-10% ">
                     <div className="flex flex-col items-center justify-center text-center">

@@ -1,20 +1,22 @@
 
 import { useEffect, useRef, useState } from "react";
 import { motion, useScroll } from "framer-motion";
+
 // import { Image1 } from "./pictures";
 
 // import image1 from "../public/image1.png";
 
-import image3 from "../public/image3.png";
-import image4 from "../public/1.png";
-import image5 from "../public/2.png";
-import image6 from "../public/3.png";
+import image1 from "../public/1.png";
+import image2 from "../public/2.png";
+import image3 from "../public/3.png";
+import image4 from "../public/4.png";
+import ann3 from "../public/ann3.gif";
 import graph from "../public/graph.png";
 import comm from "../public/comm.jpeg";
 import Image from "next/image";
 
 import { FormInput } from "./FormInput";
-;
+
 
 
 
@@ -73,7 +75,7 @@ function Item({ onInViewChange, text, index, title }) {
 export default function Page() {
   const [itemInViewStates, setItemInViewStates] = useState(Array(4).fill(false));
   const [currImg, setCurrImg] = useState();
-  const images = [Image1("180 0 1000 900  ",'width={450}'),Image2("180 0 1000 900  ",'width={450}'),Image3("180 0 1000 900  ",'width={450}'),Image3("180 0 1000 900  ",'width={450}')];
+  const images = [image1,ann3,image3,image4];
 
 
   function handleInViewChange(index, isInView) {
@@ -104,7 +106,7 @@ export default function Page() {
 
 
   return (
-    <section className="flex flex-col  items-center justify-center pb-56 gap-y-10 xl:gap-y-20" id="Solution">
+    <section className="flex flex-col  items-center justify-center md:pb-56 pb-36 gap-y-10 xl:gap-y-20" id="Solution">
 
       <div className="flex flex-col  relative bg-inherit xl:pb-32 pt-20 items-center">
 
@@ -121,8 +123,8 @@ export default function Page() {
         <div className="flex-col items-center w-4/5 " >
           <div className="w-full min-h-[20vh] items-center justify-center">
 
-            {/* <img src={images[0]} className="flex object-scale-down w-[80vw] h-[45vh]"></img> */}
-            {Image1("-250 50 1800 900 ")}
+            <Image src={images[0]} className="flex object-scale-down w-[80vw] h-[45vh]" />
+            {/* {Image1("-250 50 1800 900 ")} */}
      
 
 
@@ -144,9 +146,9 @@ export default function Page() {
         {/* //one component */}
         <div className="flex-col items-center w-4/5 " >
           <div className="w-full min-h-[20vh]">
-          {Image2("-250 50 1800 900 ")}
-     
 
+
+            <Image src={images[1]} className="flex object-scale-down w-[80vw] h-[45vh]" />
           </div>
           <div className="flex flex-col  font-bold text-[16px] sm:text-[32px] xl:text-[48px]   items-center w-full" >
             <div className="flex flex-col w-full font-bold  text-[12px] sm:text-[18px]  xl:text-[24px] md:items-center  items-start" >
@@ -165,8 +167,9 @@ export default function Page() {
           //one component */}
         <div className="flex-col items-center w-4/5  " >
           <div className="w-full min-h-[20vh]">
-          {Image3("-250 50 1800 900 ")}
+   
 
+            <Image src={images[2]} className="flex object-scale-down w-[80vw] h-[45vh]" />
           </div>
 
           <div className="flex flex-col  font-bold text-[16px] sm:text-[32px] xl:text-[48px]   items-center w-full" >
@@ -186,8 +189,9 @@ export default function Page() {
         {/* //one component */}
         <div className="flex-col items-center w-4/5 " >
           <div className="w-full min-h-[20vh]">
-          {Image3("-250 50 1800 900 ")}
+         
 
+            <Image src={images[3]} className="flex object-scale-down w-[80vw] h-[45vh]" />
 
           </div>
 
@@ -232,14 +236,14 @@ export default function Page() {
           ))}
         </div>
         <div  className="flex min-w-[450px] max-w-[450px] h-max sticky top-56 bottom-56 " >
-{currImg}
+<Image src={currImg} width={450} height={450} alt={" "}/>
         </div>
       </div>
 
 
-      <div className="flex md:flex-row bg-gray-50 md:w-4/5 lg:w-3/5 h-[20vh] items-center  shadow-lg">
+      <div className="flex md:flex-row bg-gray-50 md:w-4/5 lg:w-3/5 h-[20vh] items-center w-4/5  shadow-lg">
 
-        <div className="flex items-center justify-center md:text-[20px] text-center w-1/2 lg:pl-10 pl-5 h-full font-[500]"><div className="w-full">Join us today and be  a <br className="hidden xl:block" />  part of our ecosystem</div></div>
+        <div className="flex items-center justify-center md:text-[20px] text-[12px] text-center w-1/2 lg:pl-10 pl-5 h-full font-[500]"><div className="w-full">Join us today and be  a <br className="hidden xl:block" />  part of our ecosystem</div></div>
         <div className="w-full flex items-center justify-center  h-1/3">
 
           <div className="w-1/2 items-center">
