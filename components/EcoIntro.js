@@ -7,6 +7,7 @@ import Image from "next/image";
 
 export default function InrtoEco() {
 const [cond,setCond]=useState(false);
+const [safari,setSafari]=useState(false)
 
     const introRef = useRef(null);
 
@@ -67,8 +68,16 @@ const [cond,setCond]=useState(false);
 
 useEffect(() => {
 let userData=navigator.userAgent;
+let chromeAgent = userData.indexOf("Chrome") > -1; 
 
-setCond(userData.includes('Safari'));
+// Detect Safari 
+let safariAgent = userData.indexOf("Safari") > -1; 
+  
+// Discard Safari since it also matches Chrome 
+if ((chromeAgent) && (safariAgent)) safariAgent = false; 
+
+setSafari(safariAgent);
+setCond(userData.toLowerCase().includes('firefox'));
 },[])
 
 
@@ -76,8 +85,8 @@ setCond(userData.includes('Safari'));
         <section className="relative  justify-center  w-full items-center  grid-rows-6 grid-cols-12 sm:pb-5 h-[100vh] xl:h-[150vh] xl:pb-10 max-w-[100vw] " ref={introRef} >
 
 
-            <div className="absolute md:top-[-15%]  top-[-20%] min-[1281px]:top-[7.5%]   z-0 flex-auto  items-center ">
-                <Image src={web} alt="web" className="im-size firefox lg:min-h-full" priority={true}/>
+<div className={!cond ? "absolute md:top-[-15%] top-[-20%] min-[1281px]:top-[7.5%] overflow-visible z-0 flex-auto items-center" : "h-[170vh] absolute md:top-[-15%] top-[-20%] min-[1281px]:top-[-20%] overflow-visible z-0 flex-auto items-center "}>   
+             <Image src={web} alt="web" className="im-size firefox lg:min-h-full " priority={true}/>
             </div>
 
             <div className="flex w-full items-center flex-col absolute md:top-[25%] xl:top-[25%] top-[15%] md:gap-10 xl:gap-10">
@@ -136,7 +145,7 @@ setCond(userData.includes('Safari'));
                  <div className=" z-20">
                     <button class="btn z-50" type="button" >
                         <strong className="text-[12px] ">Ecosystem</strong>
-                        {!cond &&(
+                        {!safari &&(
                         <><div id="container-stars">
 
                                     <div id="stars"></div>
