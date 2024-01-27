@@ -85,7 +85,7 @@ setCond(userData.toLowerCase().includes('firefox'));
         <section className="relative  justify-center  w-full items-center  grid-rows-6 grid-cols-12 sm:pb-5 h-[100vh] xl:h-[150vh] xl:pb-10 max-w-[100vw] " ref={introRef} >
 
 
-<div className={!cond ? "absolute md:top-[-15%] top-[-20%] min-[1281px]:top-[7.5%] overflow-visible z-0 flex-auto items-center" : "h-[170vh] absolute md:top-[-15%] top-[-20%] min-[1281px]:top-[-20%] overflow-visible z-0 flex-auto items-center "}>   
+<div className={(!cond && !safari) ? "absolute md:top-[-15%] top-[-20%] min-[1281px]:top-[7.5%] overflow-visible z-0 flex-auto items-center" : "h-[170vh] absolute md:top-[-15%] top-[-20%] min-[1281px]:top-[-20%] overflow-visible z-0 flex-auto items-center "}>   
              <Image src={web} alt="web" className="im-size firefox lg:min-h-full " priority={true}/>
             </div>
 
